@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mans Portfolio</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+		}
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		nav {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			background-color: #ccc;
+			padding: 10px;
+		}
+		nav a {
+			color: #333;
+			text-decoration: none;
+			padding: 10px;
+			text-align: center;
+		}
+		nav a:hover {
+			background-color: #333;
+			color: #fff;
+		}
+		main {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 20px;
+			padding: 20px;
+		}
+		section {
+			background-color: #f2f2f2;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			text-align: center;
+		}
+		section h2 {
+			margin-top: 0;
+		}
+		footer {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		.hamburger {
+			display: none;
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			cursor: pointer;
+			z-index: 2;
+		}
+		 .hamburger span {
+			display: block;
+			width: 30px;
+			height: 4px;
+			background-color: #333;
+			margin: 5px 0;
+			transition: all 0.3s ease-in-out;
+		}
+		@media screen and (max-width: 768px) {
+			nav {
+				display: none;
+				position: absolute;
+				top: 80px;
+				left: 0;
+				width: 100%;
+				background-color: #ccc;
+				z-index: 1;
+			}
+			nav.show {
+				display: grid;
+			}
+			nav a {
+				display: block;
+				padding: 10px;
+				border-bottom: 1px solid #333;
+			}
+			.hamburger {
+				display: block;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Mans Portfolio</h1>
+		<div class="hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</header>
+	<nav>
+		<a href="resume.html">Resume</a>
+		<a href="contact.html">Contacts</a>
+	</nav>
+	<main> 
+		<section>
+            <img src="Tveršana3.PNG" alt="" width="420" height="300">
+			<h2>To do list</h2>
+			<p>Šajā projektā mums bija jātaisa to do list</p>
+        </section>
+		<section>
+            <img src="Tveršana2.PNG" alt="" width="420" height="300">
+			<h2>PHP spēle</h2>
+            <p>Šajā projektā es taisīju spēli kurā tev ir jāuzmin cipars</p>
+        </section>
+        <section>
+            <img src="Tveršana.PNG" alt="" width="420" height="300">
+            <h2>C++ projekts</h2>
+            <p>Šajā projektā mēs taisījām uzdevumu pāros C++ valodā</p>
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+    
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        });
+    </script>
+    </body>
+    </html>
+    </html>
+
+    
